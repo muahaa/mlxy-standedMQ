@@ -804,7 +804,7 @@ void LiftMain( void )
 						if ((LiftNowFloor[n]>=Do_Floor)&&((LiftState[n]&0x00c0)==0x40)&&((LiftFuntion&RunOneInOrder)>0))
 						{
 							if ((CIn[n]==1)&&(COut[n]==0)&&(BitFun(LiftInOrder[n], Do_Floor, 2)>0)
-							    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor))
+							    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor)&&((LiftState[m]&0x0100)==0)&&((LiftState[m]&0x0002)==0))
 							{
 								m = n;    //只有一个到达该层的内选
 								break;
@@ -813,7 +813,7 @@ void LiftMain( void )
 						if ((LiftNowFloor[n]<=Do_Floor)&&((LiftState[n]&0x00c0)==0x80)&&((LiftFuntion&RunOneInOrder)>0))
 						{
 							if ((CIn[n]==1)&&(COut[n]==0)&&(BitFun(LiftInOrder[n], Do_Floor, 2)>0)
-							    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor))
+							    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor)&&((LiftState[m]&0x0100)==0)&&((LiftState[m]&0x0002)==0))
 							{
 								m = n;    //只有一个到达该层的内选
 								break;
@@ -848,7 +848,7 @@ void LiftMain( void )
 							if ((LiftNowFloor[n]>=Do_Floor)&&((LiftState[n]&0x00c0)==0x40)&&((LiftFuntion&RunOneInOrder)>0))
 							{
 								if ((CIn[n]==1)&&(COut[n]==0)&&(BitFun(LiftInOrder[n], Do_Floor, 2)>0)
-								    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor))
+								    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor)&&((LiftState[m]&0x0100)==0)&&((LiftState[m]&0x0002)==0))
 								{
 									m = n;    //只有一个到达该层的内选
 									break;
@@ -857,7 +857,7 @@ void LiftMain( void )
 							if ((LiftNowFloor[n]<=Do_Floor)&&((LiftState[n]&0x00c0)==0x80)&&((LiftFuntion&RunOneInOrder)>0))
 							{
 								if ((CIn[n]==1)&&(COut[n]==0)&&(BitFun(LiftInOrder[n], Do_Floor, 2)>0)
-								    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor))
+								    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor)&&((LiftState[m]&0x0100)==0)&&((LiftState[m]&0x0002)==0))
 								{
 									m = n;    //只有一个到达该层的内选
 									break;
@@ -955,7 +955,7 @@ void LiftMain( void )
 						if ((LiftNowFloor[n]>=Do_Floor)&&((LiftState[n]&0x00c0)==0x40)&&((LiftFuntion&RunOneInOrder)>0))
 						{
 							if ((CIn[n]==1)&&(COut[n]==0)&&(BitFun(LiftInOrder[n], Do_Floor, 2)>0)
-							    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor))
+							    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor)&&((LiftState[m]&0x0100)==0)&&((LiftState[m]&0x0002)==0))
 							{
 								m = n;    //只有一个到达该层的内选
 								break;
@@ -964,7 +964,7 @@ void LiftMain( void )
 						if ((LiftNowFloor[n]<=Do_Floor)&&((LiftState[n]&0x00c0)==0x80)&&((LiftFuntion&RunOneInOrder)>0))
 						{
 							if ((CIn[n]==1)&&(COut[n]==0)&&(BitFun(LiftInOrder[n], Do_Floor, 2)>0)
-							    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor))
+							    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor)&&((LiftState[m]&0x0100)==0)&&((LiftState[m]&0x0002)==0))
 							{
 								m = n;    //只有一个到达该层的内选
 								break;
@@ -999,7 +999,7 @@ void LiftMain( void )
 							if ((LiftNowFloor[n]>=Do_Floor)&&((LiftState[n]&0x00c0)==0x40)&&((LiftFuntion&RunOneInOrder)>0))
 							{
 								if ((CIn[n]==1)&&(COut[n]==0)&&(BitFun(LiftInOrder[n], Do_Floor, 2)>0)
-								    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor))
+								    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor)&&((LiftState[m]&0x0100)==0)&&((LiftState[m]&0x0002)==0))
 								{
 									m = n;    //只有一个到达该层的内选
 									break;
@@ -1008,7 +1008,7 @@ void LiftMain( void )
 							if ((LiftNowFloor[n]<=Do_Floor)&&((LiftState[n]&0x00c0)==0x80)&&((LiftFuntion&RunOneInOrder)>0))
 							{
 								if ((CIn[n]==1)&&(COut[n]==0)&&(BitFun(LiftInOrder[n], Do_Floor, 2)>0)
-								    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor))
+								    &&((LiftState[n]&0x0300)==0x0300)&&(L[m]>3)&&(LiftRunFloor[m]!=Do_Floor)&&((LiftState[m]&0x0100)==0)&&((LiftState[m]&0x0002)==0))
 								{
 									m = n;    //只有一个到达该层的内选
 									break;
